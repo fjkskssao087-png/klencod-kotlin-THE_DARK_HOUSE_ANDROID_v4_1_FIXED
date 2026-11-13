@@ -1,0 +1,23 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#050609;color:#eee;font-family:Arial;touch-action:none}#renderCanvas{width:100%;height:100%;display:block}#vignette{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse,transparent 30%,#000b 100%)}#hud{position:fixed;inset:0;pointer-events:none}.topline{display:flex;justify-content:space-between;padding:17px 20px;color:#c8bda9;font-size:13px}.topline b{color:#d4ad70;letter-spacing:2px}#hint{position:absolute;top:18%;width:100%;text-align:center;color:#e8d9bd;text-shadow:0 2px 8px #000}.screen{position:fixed;inset:0;display:grid;place-items:center;background:linear-gradient(90deg,#030407ed,#03040799),radial-gradient(circle at 70% 40%,#30251b,#050609 70%)}.hide{display:none!important}section{width:min(88%,420px);padding:32px 26px;border:1px solid #65523a;border-radius:18px;background:#0d0f13ed;text-align:center;box-shadow:0 20px 80px #000}section small{color:#c49b60;letter-spacing:3px}h1{font-size:clamp(42px,10vw,64px);line-height:.9;letter-spacing:3px}h1 em{font-style:normal;color:#c49b60}p{color:#aaa;line-height:1.8;font-size:14px;margin:24px 0}button{pointer-events:auto;border:0;border-radius:10px;padding:15px;background:linear-gradient(135deg,#d0aa70,#8c6637);color:#171109;font-weight:bold;font-size:15px;width:100%;margin:5px 0}.alt{background:transparent;border:1px solid #66543b;color:#eee}.controls{position:absolute;bottom:20px;left:0;right:0;height:135px;pointer-events:none}#stick{position:absolute;left:22px;bottom:4px;width:112px;height:112px;border:1px solid #aaa8;border-radius:50%;background:#fff1;pointer-events:auto}#knob{position:absolute;left:34px;top:34px;width:42px;height:42px;border-radius:50%;background:#c6a16bcc;border:1px solid #e2c38d}.controls small{position:absolute;right:18px;top:0;color:#aaa;font-size:10px}.controls button{position:absolute;right:20px;bottom:8px;width:65px;height:65px;border-radius:50%;padding:0}.controls #run{right:95px;background:#17191ddd;border:1px solid #a08355;color:white}label{display:block;text-align:right;color:#bbb;margin:22px 0}input{display:block;width:100%;margin-top:12px;accent-color:#c9a36a}
+/* Visibility pass: clearer HUD and brighter readable room */
+#hint{background:#08090b88;width:max-content;max-width:85%;left:50%;transform:translateX(-50%);padding:9px 16px;border:1px solid #c5a16b55;border-radius:9px;font-size:15px}.topline{ text-shadow:0 2px 8px #000;font-weight:600}.controls small{background:#08090b99;padding:6px 10px;border-radius:8px}
+
+/* V3 tactile mobile controls */
+button{min-height:54px;box-shadow:inset 0 1px 0 #ffffff35,0 5px 16px #0008;transition:transform .12s ease,filter .12s ease}
+button:active{transform:scale(.94);filter:brightness(1.18)}
+.controls button{width:72px;height:72px;border:1px solid #d2b47d;background:linear-gradient(145deg,#282a2fef,#101115f2);color:#f3eadb;box-shadow:0 7px 20px #0009,inset 0 1px 1px #ffffff30}
+.controls #interact{background:linear-gradient(145deg,#e0bd82,#a77b42);color:#21180d;border:1px solid #f2d7a6}
+.controls #run{right:105px}
+#stick{background:radial-gradient(circle,#ffffff12,#05060888);border:1px solid #ffffff70;box-shadow:inset 0 0 18px #0008,0 5px 20px #0007}
+#knob{box-shadow:0 3px 10px #0008,inset 0 1px 2px #fff8}
+#hint{backdrop-filter:blur(7px);background:#08090bc9;border-color:#b996625e}
+
+/* V4 premium settings and lamp controls */
+.gear{position:fixed;top:68px;right:18px;width:48px;height:48px;min-height:48px;border-radius:15px;padding:0;background:linear-gradient(145deg,#29251fdd,#111216ee);border:1px solid #c4a16b99;color:#e8c58d;font-size:23px;z-index:5;backdrop-filter:blur(8px)}
+.settingsCard{max-height:88dvh;overflow:auto;text-align:right;padding:22px 24px}
+.settingsCard h2{text-align:center;color:#f2e6d1;margin:8px 0 15px}
+.settingsCard label{font-size:13px;margin:12px 0;color:#d4c8b5}
+.settingsCard select{width:100%;margin-top:8px;padding:12px;border-radius:10px;border:1px solid #756044;background:#17191e;color:#eee;font-size:14px;outline:none}
+.settingsCard input{accent-color:#d2ad73}
+.settingsCard button{margin-top:8px}
+.settingsCard .alt{background:linear-gradient(145deg,#282a2f,#15171b);color:#e8d5b6;border:1px solid #806b4a}

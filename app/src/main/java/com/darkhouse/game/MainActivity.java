@@ -1,0 +1,3 @@
+package com.darkhouse.game;
+import android.app.Activity;import android.os.Bundle;import android.view.View;import android.webkit.*;
+public class MainActivity extends Activity{WebView w;public void onCreate(Bundle b){super.onCreate(b);getWindow().getDecorView().setSystemUiVisibility(5894|1024|512);w=new WebView(this);w.setBackgroundColor(0xff050609);WebSettings s=w.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);s.setMediaPlaybackRequiresUserGesture(false);w.setWebChromeClient(new WebChromeClient());w.setWebViewClient(new WebViewClient());setContentView(w);w.loadUrl("file:///android_asset/index.html");}public void onBackPressed(){w.evaluateJavascript("window.gameBack&&window.gameBack()",null);}}
